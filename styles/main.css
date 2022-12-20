@@ -1,6 +1,7 @@
 body {
     font-family: 'Nunito Sans', sans-serif;
 
+
 }
 
 .container {
@@ -10,6 +11,9 @@ body {
     padding-right: 15px;
 }
 
+header {
+    border-bottom: 1px solid #dedede;
+}
 
 .header {
     padding-top: 26px;
@@ -44,6 +48,11 @@ body {
     text-decoration: none;
 }
 
+
+.header-nav a:hover {
+    color: #FFC725;
+}
+
 .header-nav a::after {
     display: block;
     content: '';
@@ -66,6 +75,7 @@ body {
     background-color: transparent;
     padding: 0;
     gap: 10px;
+    cursor: pointer;
 }
 
 .button-item {
@@ -101,6 +111,7 @@ body {
     background-position: center center;
     text-align: center;
     color: #fff;
+    margin-bottom: 140px;
 }
 
 .breadcrumbs {
@@ -109,7 +120,7 @@ body {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    gap: 16px;
+    gap: 7px;
 }
 
 .breadcrumbs a {
@@ -118,11 +129,21 @@ body {
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
 }
+ 
+
+.breadcrumbs a:hover {
+    color: #FFC725;
+}
+
+.breadcrumbs a:hover::before {
+    color: #dedede;
+}
 
 .breadcrumbs a::before {
     content: '/';
     position: relative;
-    left: -7px;
+    left: -3px;
+    pointer-events: none;
 }
 
 .breadcrumbs li:first-child a::before { /*убираем / у первой ссылки*/
@@ -132,15 +153,182 @@ body {
 .title {
     font-weight: 700;
     font-size: 79px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 17px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+
 }
 
 .description {
     font-family: 'Open Sans', sans-serif;
     font-size: 15px;
-    line-height: 1.5;
+    line-height: 1.6;
     color: #faf9f9;
     max-width: 320px;
     margin: 0 auto;
+}
+
+
+
+.banner-box {
+    position: relative;
+    background-image: url(../images/banner-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 100px 100px 120px;
+    margin-bottom: 100px;
+   
+}
+
+.banner-title {
+
+    margin: 0;
+    color: #fff;
+    font-size: 60px;
+    font-weight: 900;
+    margin-bottom: 12px;
+
+    
+}
+
+.banner-title span {
+
+    background-color: #F37335;
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 5px 0;
+    border-radius: 14px;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+    max-width: 96px;
+    text-align: center;
+    margin-bottom: 9px;
+}
+
+.banner-text {
+    max-width: 353px;
+    color: #faf9f9;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6 ;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.banner-link {
+    color: #1E2F40;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #fbb731;
+    border-radius: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 20px 27px;
+
+
+
+}
+
+.menu-header {
+    display: flex;     
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-title {
+    font-size: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1b2a49;
+    margin: 0;
+}
+
+.menu-select {
+    border: 1px solid #dedede;
+    border-radius: 22px;
+    padding: 13px 30px;
+    color: #443737;
+    font-size: 15px;
+    appearance: none;
+    flex-basis: 279px; /*ширина флекса*/
+    background-image: url(../images/arrow.svg);
+    background-size: 12.79px 7.75px;
+    background-repeat: no-repeat;
+    background-position: 89% center;
+}
+
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 40px;
+    grid-row-gap: 56px;
+}
+
+.menu-grid-cover {
+    width: 100%; /*Устанавливаем ширину, чтобы картинки не ломались при адаптиве*/
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-grid-cover img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    width: 100%;
+    height: 430px;
+}
+
+.menu-grid-title {
+    margin: 0;
+    font-weight: 600;
+    font-size: 30px;
+    color: #1b2a49;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu-grid-price {
+    color: #979797;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    margin: 0;
+    margin-top: 8px;
+}
+
+.menu-grid-btn {
+    display: block;
+    margin: 0 auto;
+    background-color: #FBB731;
+    border-radius: 5px;
+    padding: 8px 36px;
+    border: none;
+    color: #1E2F40;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 20px;  
+    cursor: pointer;
+
+}
+
+.menu-grid-icon {
+    position: relative;
+    content: url(../images/cart-menu.svg);
+    top: 4px;
+    right: 5px;
+    height: 18px;
+    width: 18px;
+}
+
+.indent {
+    margin-top: 104px;
+    margin-bottom: 140px;
 }
