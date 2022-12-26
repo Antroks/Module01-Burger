@@ -23,6 +23,12 @@ header {
     align-items: center;
     justify-content: space-between;
 }
+.header-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-basis: 68.5%;
+}
 
 .header-logo {
     display: block;
@@ -225,10 +231,17 @@ header {
     border-radius: 5px;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 20px 27px;
+    padding: 18px 25px;
+    border: 1px solid #fbb731;
 
 
 
+}
+
+
+.banner-link:hover {
+    background-color: transparent;
+    color: #fbb731; ;
 }
 
 .menu-header {
@@ -337,6 +350,9 @@ header {
     margin-top: 20px; 
 
 }
+.menu-grid-btn:hover {
+    background-color: #F37335;
+}
 
 /*.menu-grid-icon {
     position: relative;
@@ -394,7 +410,7 @@ header {
 
 
 
-.footer-item li {
+.footer-list li {
     margin-bottom: 9px;
     font-family:  'Open Sans',sans-serif;
     font-size: 15px;
@@ -404,10 +420,14 @@ header {
 
 }
 
-.footer-item a {
+.footer-list a {
     color: #dedede;
     text-decoration: none;
     font-weight: 400;
+}
+
+.footer-list a:hover {
+    color: #fbb731;
 }
 
 .footer-item span {
@@ -418,18 +438,28 @@ header {
 
 }
 
-.footer-tel ul {
+
+.footer-list-tel {
+    margin-top: 0;
+}
+
+.footer-list-tel li {
+    margin-bottom: 12px;
+}
+
+
+.footer-list-tel a {
     font-size: 20px;
     color: #fbb731;
-    margin-top: 0;
     font-weight: 900;
 }
 
-.footer-tel li {
-    margin-bottom: 12px;
+.footer-list-tel a:hover {
+    color: #fff;
 }
 
 .footer-list {
     padding-left: 0;
     list-style-type: none;
 }
+
