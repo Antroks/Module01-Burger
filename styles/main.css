@@ -60,6 +60,11 @@ header {
     color: #FFC725;
 }
 
+
+.header-nav a:hover {
+    color: #FFC725;
+}
+
 .header-nav a::after {
     display: block;
     content: '';
@@ -146,6 +151,15 @@ header {
 .breadcrumbs a:hover::before {
     color: #dedede;
 }
+ 
+
+.breadcrumbs a:hover {
+    color: #FFC725;
+}
+
+.breadcrumbs a:hover::before {
+    color: #dedede;
+}
 
 .breadcrumbs a::before {
     content: '/';
@@ -185,7 +199,11 @@ header {
     background-repeat: no-repeat;
     background-position: center center;
     padding: 100px 100px 120px;
+<<<<<<< HEAD
     margin-bottom: 80px;
+=======
+    margin-bottom: 100px;
+>>>>>>> b567d0af9e5f54955a2544165b488ebd357a2c9b
    
 }
 
@@ -235,7 +253,10 @@ header {
     text-transform: uppercase;
     padding: 18px 25px;
     border: 1px solid #fbb731;
+<<<<<<< HEAD
     transition: 0.2s;
+=======
+>>>>>>> b567d0af9e5f54955a2544165b488ebd357a2c9b
 
 
 
@@ -247,10 +268,13 @@ header {
     color: #fbb731; ;
 }
 
+<<<<<<< HEAD
 .menu {
     padding-top: 20px;
 }
 
+=======
+>>>>>>> b567d0af9e5f54955a2544165b488ebd357a2c9b
 .menu-header {
     display: flex;     
     align-items: center;
@@ -355,7 +379,10 @@ header {
     gap: 9px;
     cursor: pointer;
     margin-top: 20px; 
+<<<<<<< HEAD
     transition: 0.3s;
+=======
+>>>>>>> b567d0af9e5f54955a2544165b488ebd357a2c9b
 
 }
 .menu-grid-btn:hover {
@@ -432,7 +459,10 @@ header {
     color: #dedede;
     text-decoration: none;
     font-weight: 400;
+<<<<<<< HEAD
     transition: 0.3s;
+=======
+>>>>>>> b567d0af9e5f54955a2544165b488ebd357a2c9b
 }
 
 .footer-list a:hover {
@@ -461,7 +491,10 @@ header {
     font-size: 20px;
     color: #fbb731;
     font-weight: 900;
+<<<<<<< HEAD
     transition: 0.3s;
+=======
+>>>>>>> b567d0af9e5f54955a2544165b488ebd357a2c9b
 }
 
 .footer-list-tel a:hover {
@@ -473,6 +506,7 @@ header {
     list-style-type: none;
 }
 
+<<<<<<< HEAD
 .button-up {
     background-color: #FBB731;
     font-weight: 700;
@@ -499,6 +533,8 @@ header {
     opacity: 1;
 }
 
+=======
+>>>>>>> b567d0af9e5f54955a2544165b488ebd357a2c9b
 /*style index*/
 
 .main {
