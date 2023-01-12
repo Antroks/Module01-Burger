@@ -416,6 +416,7 @@ header {
 .footer-box {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .footer-logo {
@@ -423,9 +424,6 @@ header {
     height: 56px;
 }
 
-.footer-item {
-    flex: 0 0 auto;
-}
 
 .footer-item h2 {
     font-size: 20px;
@@ -433,6 +431,7 @@ header {
     text-transform: uppercase;
     margin-bottom: 19px;
     margin-top: 0;
+    line-height: 1.5;
 }
 
 
@@ -803,6 +802,14 @@ header {
         gap: 21px;
     }
 
+    .button-up.visible {
+        display: none;
+    }
+
+    .menu-other .container {
+        padding-right: 0;
+    }
+
     .footer {
         padding: 62px 2px;
         margin-top: 50px;
@@ -812,6 +819,7 @@ header {
     .footer-box {
         display: flex;
         flex-direction: column;
+        
     }
 
 
@@ -882,11 +890,11 @@ header {
 
     .menu-grid {
         margin-top: 31px;
-        gap: 24px 12px;
+        gap: 25px 15px;
     }
 
     .menu-grid-title {
-        font-size: 13px;
+        font-size: 15px;
         margin-top: 7px;
         
     }
@@ -901,49 +909,82 @@ header {
     }
 
     .menu-grid-cover {
-        height: 180px;
+        height: 56vw;
     }
 
     .menu-grid-cover img {
-        height: 180px;
+        height: 100%;
     }
 
     .menu-other {
         padding-top: 63px;
-        height: 408px;
+        height: 108vw;
+        padding-bottom: 61px;
     }
 
     .menu-other .menu-grid {
         margin-top: 36px;
-        padding-bottom: 70px
+        padding-bottom: 24vw;
     }
 
 
 
 
-    .menu-other .menu-grid-cover,
+    .menu-other .menu-grid-cover {
+        height: 56vw;
+        
+    }
+
     .menu-other .menu-grid-cover img {
-        height: 180px;
+        height: 100%;
         
     }
 
     
     .menu-other .menu-grid-item {
-        flex: 0 0 138px;
+        flex: 0 0 38vw;
     }
 
 
     .footer {
-        padding: 62px 2px;
-        margin-top: 0;
-        position: relative;
-        
-    }
-    .footer-box {
-        display: flex;
-        flex-direction: column;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        margin-top: 60px;
+       
     }
 
+
+    .footer-list + .footer-list-tel {
+        display: none;
+    }
+
+    .footer-tel {
+        display: block;
+    }
+
+    .footer-box {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas: "logo tel" "link link" "info info";
+        gap: 0;
+    }
+
+
+    .footer-item:nth-child(1) {
+        grid-area: logo;
+    }
+
+    .footer-item:nth-child(2) {
+        grid-area: link;
+    }
+
+    .footer-item:nth-child(3) {
+        grid-area: info;
+    }
+
+    .footer-item:nth-child(4) {
+        grid-area: tel;
+    }
 
     .footer-item h2 {
         font-size: 18px;
@@ -951,7 +992,7 @@ header {
     }
 
     .footer-item .footer-title {
-        margin-top: 27px;
+        margin-top: 20px;
         margin-bottom: 23px;
     }
 
@@ -971,6 +1012,12 @@ header {
         height: 37px;
         background-size: contain;
     }
+
+    .menu-grid-title {
+        font-size: 13px;
+        
+    }
+    
 }
 
 @media (max-width: 320px) {
