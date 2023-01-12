@@ -791,6 +791,9 @@ header {
 
 }
 
+
+
+
 @media (max-width: 765px) {
     nav {
         display: none;
@@ -798,6 +801,34 @@ header {
 
     .header {
         gap: 21px;
+    }
+
+    .footer {
+        padding: 62px 2px;
+        margin-top: 50px;
+        position: relative;
+        
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .footer-item h2 {
+        font-size: 18px;
+        margin-top: 45px;
+    }
+
+    .footer-item .footer-title {
+        margin-top: 27px;
+        margin-bottom: 23px;
+    }
+
+    .footer-list-tel {
+        position: absolute;
+        top: 57px;
+        right: 15px;
     }
 }
 
@@ -830,13 +861,13 @@ header {
 
     .bg {
         padding: 55px 0;
-        margin-bottom: 36px;
+        margin-bottom: 35px;
     }
 
     .banner-box {
         padding: 35px 24px 54px;
         background-position: 17% center;
-        margin-bottom: 30px;
+        margin-bottom: 38px;
     }
 
     .menu-title {
@@ -846,6 +877,7 @@ header {
     .menu-select {
         font-size: 12px;
         flex-basis: 136px;
+        padding: 13px 15px;
     }
 
     .menu-grid {
@@ -865,7 +897,7 @@ header {
 
     .menu-grid-btn {
         padding: 10px 22px;
-        margin-top: 7px;
+        margin-top: 13px;
     }
 
     .menu-grid-cover {
@@ -876,12 +908,33 @@ header {
         height: 180px;
     }
 
+    .menu-other {
+        padding-top: 63px;
+        height: 408px;
+    }
+
+    .menu-other .menu-grid {
+        margin-top: 36px;
+        padding-bottom: 70px
+    }
+
+
+
+
+    .menu-other .menu-grid-cover,
+    .menu-other .menu-grid-cover img {
+        height: 180px;
+        
+    }
 
     
+    .menu-other .menu-grid-item {
+        flex: 0 0 138px;
+    }
 
 
     .footer {
-        padding: 59px 13px;
+        padding: 62px 2px;
         margin-top: 0;
         position: relative;
         
@@ -894,7 +947,12 @@ header {
 
     .footer-item h2 {
         font-size: 18px;
-        margin-top: 41px;
+        margin-top: 45px;
+    }
+
+    .footer-item .footer-title {
+        margin-top: 27px;
+        margin-bottom: 23px;
     }
 
     .footer-list-tel {
@@ -972,6 +1030,43 @@ header {
     .content-link {
         font-size: 13px;
         padding: 17px 40px;
+    }
+
+
+    .promo {
+        justify-content: center;
+    }
+
+    .promo-left,
+    .promo-right {
+        width: 362px;
+        height: 298px;
+        
+    }
+
+    .promo-right {
+        padding: 44px 26px 29px;
+    }
+
+    .promo-left {
+        padding: 44px 29px;
+    }
+
+    .promo a {
+        
+        
+        padding: 17px 40px;
+        font-size: 13px;
+        
+    }
+
+
+    .promo-description {
+        font-size: 15px;
+    }
+
+    .promo-right .promo-description {
+        max-width: 308px;
     }
 
     
