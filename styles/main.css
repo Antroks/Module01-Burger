@@ -285,7 +285,9 @@ header {
     padding: 13px 30px;
     color: #443737;
     font-size: 15px;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     flex-basis: 279px; /*ширина флекса*/
     background-image: url(../images/arrow.svg);
     background-size: 12.79px 7.75px;
@@ -314,7 +316,8 @@ header {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
     height: 430px;
 }
@@ -1079,8 +1082,8 @@ header {
         padding: 17px 40px;
     }
 
-
-    .promo {
+    
+    /*.promo {
         justify-content: center;
     }
 
@@ -1115,6 +1118,144 @@ header {
     .promo-right .promo-description {
         max-width: 308px;
     }
-
+*/
     
+}
+
+
+@media (max-width: 567px) {
+
+    .promo {
+        padding-bottom: 0;
+    }
+    .promo .wrapper {
+        display: block;
+        margin: 0;
+    }
+
+    .promo-left {
+       
+        padding: 39px 58px 59px 15px;
+        
+    }
+    .promo-right {
+        background-position: 63% center;
+        background-size: cover;
+        padding: 35px 39px 45px 12px;
+        
+    }
+
+    .promo-left .cost {
+        font-size: 55px;
+    }
+
+    .promo-right .free {
+        font-size: 39px;
+    }
+
+    .promo-right a {
+        padding: 18px 31px;
+    }
+
+
+    /*.promo .promo-left,
+    .promo .promo-right {
+        height: 56vw;
+        
+    }
+
+    .promo .promo-left,
+    .promo .promo-right img {
+        height: 100%;
+        
+    }*/
+
+    @media (max-width: 320px) {
+
+
+        
+        .main img {
+            width: 298px;
+            right: -83px;
+            bottom: -82px;
+        }
+        
+
+        .main .wrapper {
+
+            margin: 0 auto;
+            margin-left: 15px;
+
+        }
+        .content {
+            padding-bottom: 169px;
+            padding-top: 38px;
+            
+        }
+
+        .content-title {
+            font-size: 58px;
+            max-width: 290px;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+
+        .content-title span {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .content-text {
+            font-size: 13px;
+            width: 290px;
+            line-height: 1.3;
+            margin-bottom: 35px;
+            
+        }
+
+        .visual-bg {
+            display: none;
+        }
+
+        .main {
+            overflow: hidden;
+        }
+        .promo {
+            padding-top: 95px;
+        }
+
+        .promo-right {
+            background-position: 63% center;
+            background-size: cover;
+            padding: 42px 14px 47px;
+            
+        }
+
+        .promo-left .promo-description {
+            max-width: 250px;
+            font-size: 12px;
+            line-height: 20px;
+            margin-top: 5px;
+
+        }
+
+        .promo-left {
+       
+            padding: 39px 16px 62px;
+            margin-bottom: 22px;
+            
+        }
+        .free {
+            margin-bottom: 17px;
+        }
+        .sale {
+            margin-bottom: 11px;
+            padding: 5px 21px
+           
+        }
+
+        .footer-title {
+            margin-top: 33px;
+        }
+    }
 }
