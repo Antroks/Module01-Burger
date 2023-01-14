@@ -285,7 +285,9 @@ header {
     padding: 13px 30px;
     color: #443737;
     font-size: 15px;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     flex-basis: 279px; /*ширина флекса*/
     background-image: url(../images/arrow.svg);
     background-size: 12.79px 7.75px;
@@ -314,7 +316,8 @@ header {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
     height: 430px;
 }
@@ -395,6 +398,11 @@ header {
     width: 18px;
 }
 
+.menu-other {
+    padding-top: 100px;
+}
+
+
 .indent {
     margin-top: 104px;
     margin-bottom: 140px;
@@ -411,6 +419,7 @@ header {
 .footer-box {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .footer-logo {
@@ -418,9 +427,6 @@ header {
     height: 56px;
 }
 
-.footer-item {
-    flex: 0 0 auto;
-}
 
 .footer-item h2 {
     font-size: 20px;
@@ -428,6 +434,7 @@ header {
     text-transform: uppercase;
     margin-bottom: 19px;
     margin-top: 0;
+    line-height: 1.5;
 }
 
 
@@ -529,6 +536,8 @@ header {
     flex: 0 0 580px;
     padding-top: 170px;
     padding-bottom: 170px;
+    
+    
 }
 .content-title {
     font-size: 120px;
@@ -553,6 +562,8 @@ header {
     font-size: 19px;
     line-height: 1.4;
     margin-bottom: 42px;
+    
+    
 }
 .content-link,
 .promo a {
@@ -570,17 +581,21 @@ header {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
-    position: relative;
+    
 }
 .visual-bg {
     width: 432px;
     height: 100%;
     background: linear-gradient(2.42deg, #F37335 -19.6%, #FBB731 100.79%, #FDC830 100.79%);
 }
+
+
+
 .main img {
     width: 829px;
     position: absolute;
     right: -168px;
+    
 }
 .promo {
     padding-top: 186px;
@@ -735,6 +750,7 @@ header {
     .menu-other {
         overflow: hidden;
         height: 558px;
+        padding-top: 89px;
     }
 
     .menu-other .menu-grid {
@@ -751,7 +767,7 @@ header {
 
     .menu-other .menu-grid-cover,
     .menu-other .menu-grid-cover img {
-        height: 329px;
+        height: 320px;
     }
 
 
@@ -760,9 +776,6 @@ header {
         padding: 59px;
     }
 
-    .footer-box {
-        flex-wrap: wrap;
-    }
 
     .footer-tel {
         display: none;
@@ -775,14 +788,13 @@ header {
 
     /*index*/
 
-    .wrapper {
-        max-width: 738px;
-    }
+   
 
-    .content-title {
-       
-    }
+
 }
+
+
+
 
 @media (max-width: 765px) {
     nav {
@@ -792,28 +804,81 @@ header {
     .header {
         gap: 21px;
     }
+
+    .button-up.visible {
+        display: none;
+    }
+
+    .menu-other .container {
+        padding-right: 0;
+    }
+
+    .footer {
+        padding: 62px 2px;
+        margin-top: 50px;
+        position: relative;
+        
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+
+    .footer-item h2 {
+        font-size: 18px;
+        margin-top: 45px;
+    }
+
+    .footer-item .footer-title {
+        margin-top: 27px;
+        margin-bottom: 23px;
+    }
+
+    .footer-list-tel {
+        position: absolute;
+        top: 57px;
+        right: 15px;
+    }
 }
 
 @media (max-width: 567px) {
+
+    .header {
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
+
+    .header-logo {
+        width: 116px;
+        height: 37px;
+    }
+
     .title {
         font-size: 38px;
+        margin-top: 28px;
+        margin-bottom: 11px;
     }
 
     .breadcrumbs a {
         font-size: 15px;
     }
 
-    .descriptionfont {
+    .description {
         font-size: 12px;
+        max-width: 281px;
     }
 
     .bg {
         padding: 55px 0;
+        margin-bottom: 35px;
     }
 
     .banner-box {
         padding: 35px 24px 54px;
         background-position: 17% center;
+        margin-bottom: 38px;
     }
 
     .menu-title {
@@ -823,10 +888,17 @@ header {
     .menu-select {
         font-size: 12px;
         flex-basis: 136px;
+        padding: 13px 15px;
+    }
+
+    .menu-grid {
+        margin-top: 31px;
+        gap: 25px 15px;
     }
 
     .menu-grid-title {
-        font-size: 13px;
+        font-size: 15px;
+        margin-top: 7px;
         
     }
 
@@ -836,22 +908,102 @@ header {
 
     .menu-grid-btn {
         padding: 10px 22px;
+        margin-top: 13px;
+    }
+
+    .menu-grid-cover {
+        height: 56vw;
+    }
+
+    .menu-grid-cover img {
+        height: 100%;
+    }
+
+    .menu-other {
+        padding-top: 63px;
+        height: 108vw;
+        padding-bottom: 61px;
+    }
+
+    .menu-other .menu-grid {
+        margin-top: 36px;
+        padding-bottom: 24vw;
+    }
+
+
+
+
+    .menu-other .menu-grid-cover {
+        height: 56vw;
+        
+    }
+
+    .menu-other .menu-grid-cover img {
+        height: 100%;
+        
+    }
+
+    
+    .menu-other .menu-grid-item {
+        flex: 0 0 38vw;
     }
 
 
     .footer {
-        padding: 59px 13px;
-    }
-    .footer-box {
-        display: flex;
-        flex-direction: column;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        margin-top: 60px;
+       
     }
 
+
+    .footer-list + .footer-list-tel {
+        display: none;
+    }
+
+    .footer-tel {
+        display: block;
+    }
+
+    .footer-box {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas: "logo tel" "link link" "info info";
+        gap: 0;
+    }
+
+
+    .footer-item:nth-child(1) {
+        grid-area: logo;
+    }
+
+    .footer-item:nth-child(2) {
+        grid-area: link;
+    }
+
+    .footer-item:nth-child(3) {
+        grid-area: info;
+    }
+
+    .footer-item:nth-child(4) {
+        grid-area: tel;
+    }
 
     .footer-item h2 {
         font-size: 18px;
+        margin-top: 45px;
     }
 
+    .footer-item .footer-title {
+        margin-top: 20px;
+        margin-bottom: 23px;
+    }
+
+    .footer-list-tel {
+        position: absolute;
+        top: 57px;
+        right: 15px;
+    }
     
     
 }
@@ -863,11 +1015,549 @@ header {
         height: 37px;
         background-size: contain;
     }
+
+    .menu-grid-title {
+        font-size: 13px;
+        
+    }
+    
 }
 
 @media (max-width: 320px) {
     .banner-box {
-        padding: 35px 24px 54px;
+        padding: 35px 15px 54px;
         background-position: 25% center;
     }
+
+    .banner-text {
+        max-width: 250px;
+    }
 }
+
+
+/*media for index.html*/
+
+@media (max-width: 1000px) {
+    .wrapper {
+        max-width: 738px;
+        
+    }
+
+    .main img {
+        width: 496px;
+        right: -126px;
+        bottom: -84px;
+        z-index: 1;
+        
+    }
+    
+
+    .visual-bg {
+        width: 198px;
+    }
+
+    .content {
+        padding-top: 42px;
+    }
+
+    .content-title {
+        font-size: 86px;
+        line-height: 101px;
+    }
+
+    .content-title span {
+        font-size: 22px;
+        line-height: 27px;
+    }
+
+    .content-text {
+        font-size: 14px;
+        margin-top: 27px;
+        width: 410px;
+        margin-bottom: 30px;
+    }
+
+    .content-link {
+        font-size: 13px;
+        padding: 17px 40px;
+    }
+
+    .promo {
+        padding-top: 109px;
+        flex: 0 0 49%;
+        padding-bottom: 46px;
+    }
+    
+    .promo a {
+        padding: 17px 38px;
+    }
+   
+
+    .promo-left .promo-description {
+        max-width: 291px;
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 10px;
+        
+
+    }
+
+    .promo-right {
+        background-position: 63% center;
+        background-size: cover;
+        padding: 62px 29px 63px;
+        height: 100%;
+        
+    }
+
+    .promo-right .promo-description {
+        margin-bottom: 10px;
+        margin-top: 0;
+        font-size: 14px;
+
+    }
+
+    .free {
+        margin-bottom: 12px;
+    }
+
+
+    
+
+    .promo-left {
+   
+        padding: 43px 30px 65px;
+        height: 100%;
+        
+        
+    }
+
+    .sale {
+        margin-bottom: 11px;
+        padding: 5px 21px
+       
+    }
+
+    
+    /*.promo {
+        justify-content: center;
+    }
+
+    .promo-left,
+    .promo-right {
+        width: 362px;
+        height: 298px;
+        
+    }
+
+    .promo-right {
+        padding: 44px 26px 29px;
+    }
+
+    .promo-left {
+        padding: 44px 29px;
+    }
+
+    .promo a {
+        
+        
+        padding: 17px 40px;
+        font-size: 13px;
+        
+    }
+
+
+    .promo-description {
+        font-size: 15px;
+    }
+
+    .promo-right .promo-description {
+        max-width: 308px;
+    }
+*/
+    
+}
+
+@media (max-width: 765px) { 
+    .content {
+        flex: 0 0 526px;
+        padding-bottom: 123px;
+    }
+
+    .visual {
+        justify-content: flex-start;
+    }
+    .visual-bg {
+        width: 198px;
+    }
+
+    .content-title span {
+        margin-bottom: 11px;
+    }
+
+    .content-title {
+        margin-bottom: 20px;
+    }
+
+    .content-text {
+        margin-top: 20px;
+        max-width: 406px;
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 35px;
+    }
+
+    .main img {
+        width: 495px;
+        right: -122px;
+        bottom: -121px;
+    }
+
+    .promo .wrapper {
+        margin-left: 15px;
+    }
+    .promo {
+        padding-top: 109px;
+        flex: 0 0 49%;
+        padding-bottom: 91px;
+    }
+    
+    .promo a {
+        padding: 17px 38px;
+    }
+   
+
+    .promo-left .promo-description {
+        max-width: 291px;
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 10px;
+        
+
+    }
+
+    .promo-right {
+        background-position: 63% center;
+        background-size: cover;
+        padding: 62px 29px 63px;
+        height: 100%;
+        
+    }
+
+    .promo-right .promo-description {
+        margin-bottom: 10px;
+        margin-top: 0;
+        font-size: 14px;
+
+    }
+
+    .free {
+        margin-bottom: 12px;
+    }
+
+
+    
+
+    .promo-left {
+   
+        padding: 43px 30px 65px;
+        height: 100%;
+        
+        
+    }
+
+    .sale {
+        margin-bottom: 11px;
+        padding: 5px 21px
+       
+    }
+
+    .footer {
+        padding: 62px 2px;
+        margin-top: 50px;
+        position: relative;
+        
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+
+    .footer-item h2 {
+        font-size: 18px;
+        margin-top: 45px;
+    }
+
+    .footer-item .footer-title {
+        margin-top: 27px;
+        margin-bottom: 23px;
+    }
+
+    .footer-list-tel {
+        position: absolute;
+        top: 57px;
+        right: 15px;
+    }
+
+    
+
+
+}
+
+@media (max-width: 567px) {
+
+    .promo {
+        padding-bottom: 0;
+    }
+    .promo .wrapper {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .promo-left {
+       
+        padding: 39px 58px 59px 15px;
+        
+    }
+    .promo-right {
+        background-position: 63% center;
+        background-size: cover;
+        padding: 35px 39px 45px 12px;
+        
+    }
+
+    .promo-left .cost {
+        font-size: 55px;
+    }
+
+    .promo-right .free {
+        font-size: 39px;
+    }
+
+    .promo-right a {
+        padding: 18px 31px;
+    }
+
+
+   
+
+    .main img {
+        width: 320px;
+        right: -83px;
+        bottom: -82px;
+    }
+    
+
+    .main .wrapper {
+
+        margin: 0 auto;
+        margin-left: 25px;
+
+    }
+    .content {
+        padding-bottom: 169px;
+        padding-top: 38px;
+        
+    }
+
+    .content-title {
+        font-size: 58px;
+        max-width: 290px;
+        line-height: 1.2;
+        margin-bottom: 0;
+    }
+
+    .content-title span {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .content-text {
+        font-size: 13px;
+        width: 290px;
+        line-height: 1.3;
+        margin-bottom: 35px;
+        
+    }
+
+    .visual-bg {
+        display: none;
+    }
+
+    .main {
+        overflow: hidden;
+    }
+    .promo {
+        padding-top: 95px;
+    }
+
+    .promo-right {
+        background-position: 63% center;
+        background-size: cover;
+        padding: 42px 24px 47px;
+        
+    }
+
+    .promo-left .promo-description {
+        max-width: 250px;
+        font-size: 12px;
+        line-height: 20px;
+        margin-top: 5px;
+
+    }
+
+    .promo-left {
+   
+        padding: 39px 26px 62px;
+        margin-bottom: 22px;
+        
+    }
+    .free {
+        margin-bottom: 17px;
+    }
+    .sale {
+        margin-bottom: 11px;
+        padding: 5px 21px
+       
+    }
+
+    .footer-title {
+        margin-top: 33px;
+    }
+
+    .footer-box {
+        margin-left: 5px;
+    }
+}
+    /*.promo .promo-left,
+    .promo .promo-right {
+        height: 56vw;
+        
+    }
+
+    .promo .promo-left,
+    .promo .promo-right img {
+        height: 100%;
+        
+    }*/
+
+    @media (max-width: 320px) {
+   
+        .main img {
+            width: 297px;
+            right: -84px;
+            bottom: -114px;
+            object-fit: cover;
+        }
+        
+
+        .footer .container {
+
+            padding-left: 8px;
+        }
+
+        .main .wrapper {
+
+            margin: 0 auto;
+            margin-left: 15px;
+
+        }
+        .content {
+            padding-bottom: 169px;
+            padding-top: 33px;
+            
+        }
+
+        .content-title {
+            font-size: 58px;
+            max-width: 290px;
+            line-height: 1.2;
+            margin-bottom: 0;
+        }
+
+        .content-title span {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .content-text {
+            font-size: 13px;
+            width: 290px;
+            line-height: 1.3;
+            margin-bottom: 38px;
+            margin-top: 26px;
+            
+        }
+
+        .visual-bg {
+            display: none;
+        }
+
+        .main {
+            overflow: hidden;
+        }
+        .promo {
+            padding-top: 95px;
+        }
+
+        .promo-right {
+            background-position: 63% center;
+            background-size: cover;
+            padding: 42px 14px 46px;
+            
+        }
+
+        .promo-left .promo-description {
+            max-width: 250px;
+            font-size: 12px;
+            line-height: 20px;
+            margin-top: 5px;
+
+        }
+
+        .promo-left {
+       
+            padding: 39px 16px 65px;
+            margin-bottom: 22px;
+            
+        }
+
+        .promo-right .promo-description {
+            margin-bottom: 22px;
+        }
+
+        .free {
+            margin-bottom: 16px;
+        }
+
+        .sale {
+            margin-bottom: 11px;
+            padding: 5px 21px
+           
+        }
+
+        .cost {
+            margin-bottom: 4px;
+        }
+
+        .footer {
+            padding: 61px 2px;
+            margin-top: 60px;
+        }
+        
+
+
+        .footer-title {
+            margin-top: 33px;
+        }
+
+        
+        .footer-item .footer-title {
+            margin-top: 21px;
+            margin-bottom: 15px;
+        }
+    }
+    
+
